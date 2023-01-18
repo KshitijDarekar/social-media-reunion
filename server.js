@@ -4,6 +4,7 @@ import * as dotenv from "dotenv";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import authRoutes from "./routes/authRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(cookieParser());
 
 app.use("/api", authRoutes);
+app.use("/api", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World, from express.App is running !");
