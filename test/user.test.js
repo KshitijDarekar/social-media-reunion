@@ -2,6 +2,7 @@ import chai from "chai";
 import chaiHttp from "chai-http";
 import server from "../server.js";
 import User from "../models/userModel.js";
+import mongoose from "mongoose";
 
 const should = chai.should();
 const expect = chai.expect;
@@ -18,6 +19,9 @@ describe("GET /api/user ", () => {
   let token;
 
   before(async () => {
+    mongoose.connect(process.env.TEST_URI, {
+      useNewUrlParser: true,
+    });
     // Create a test user
     const user = new User({
       name: "testuser",
@@ -37,6 +41,7 @@ describe("GET /api/user ", () => {
   after(async () => {
     // Delete the test user
     await User.deleteMany({});
+    mongoose.disconnect();
   });
 
   it("should return the user profile if the request is authenticated", async () => {
