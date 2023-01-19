@@ -1,12 +1,9 @@
 
-# Social Media Backend
+# Social Media Backend 
 
 This repository is a backend service for a social media platform built on Node.js, Express.js, MongoDb, tested using Mocha and Chai .
 
-## Demo
-
-Insert gif or link to demo
-
+## Demo 🚀
 
 [![Live URL](https://img.shields.io/badge/%F0%9F%8C%90%20Live%20Demo-Click%20Here-blueviolet?style=for-the-badge)](https://social-media-reunion-x1w6.onrender.com/)
 ## Features
