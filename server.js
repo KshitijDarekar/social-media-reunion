@@ -42,8 +42,8 @@ mongoose
 const port = process.env.PORT || 3000;
 const ip = process.env.IP || "0.0.0.0";
 
-app.listen(port, ip, () => {
+const server=app.listen(port, ip, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
 
-export default app;
+export default server;
