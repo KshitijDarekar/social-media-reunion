@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start":"node server.js",
     "test": "mocha --timeout 5000 test/*.js",
     "dev": "export NODE_ENV=dev && nodemon server.js"
   },
